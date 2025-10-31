@@ -77,7 +77,7 @@ nav a:hover {
 
 /* Banner */
 .banner img {
-  width: 70%;
+  width: auto;
   height: auto;
   margin-left: 5em;
 }

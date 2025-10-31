@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kumpulan PUTRA Seni</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dark-style.css">
+</head>
+<body>
+  <header>
+    <h1>Kumpulan PUTRA Seni</h1>
+    <nav>
+      <a href="index.html">Laman Utama</a>
+      <a href="about.html">Tentang KPS</a>
+      <a href="news.html">Berita KPS</a>
+      <a href="merchandise.html">E-Mall</a>
+    </nav>
+  </header>
+
+   <section class="banner">
+    <img src="images/c1.png" alt="KPS Banner">
+  </section>
+
+  <section class="hero">
+    <h2>Selamat Datang ke Laman Kumpulan PUTRA Seni (KPS)</h2>
+    <p>"Memartabatkan seni dan budaya Melayu".</p>
+    <a href="about.html">
+      <button>Tentang KPS</button>
+    </a>  
+  </section>
+
+  <section class="cards">
+    <h3>Terkini</h3>
+    <div class="card" onclick="openPopup('rp')">
+      <h3>KPS di Festival Sarawakiana</h3>
+      <img src="images/WhatsApp Image 2025-10-25 at 16.15.45_8771cb3e.jpg" alt="KPS RP">
+      <p>Berlangsung di Pustaka Negeri Sarawak, Miri.</p>
+    </div>
+    <div class="card" onclick="openPopup('ntfb')">
+      <h3>National Theatre Festival Brunei (NTFB) 2025</h3>
+      <img src="images/1758815485341.jpg" alt="KPS NTFB">
+      <p>Mempersembahkan teater 'Lahar' pada NTFB kali ini.</p>
+    </div>
+    <div class="card" onclick="openPopup('jelajah sastera')">
+      <h3>Jelajah Sastera KPS di SMMHT</h3>
+      <img src="images/IMG-20250731-WA0025.jpg" alt="KPS Sastera">
+      <p>Memperkenalkan kesenian dan sastera kepada para pelajar SMMHT.</p>
+    </div> 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h3 id="popup-title"></h3>
+        <img id="popup-img" src="" alt="">
+        <p id="popup-desc"></p>
+     </div>
+  </section>
+
+   <footer>
+    <div class="footer-info">
+      <h4>Hubungi Kami</h4>
+      <p>Address: Hab Seni Rimba<br>
+      Tel: +673 1234567<br>
+      <img src="images/5D8s-GsHJlJ.png" alt="FB logo" class="social-icon">Kumpulan PUTRA Seni<br>
+      <img src="images/Instagram_logo_2022.png" alt="IG logo" class="social-icon">kumpulanputraseni<br>
+      <img src="images/images.png" alt="mail logo" class="social-icon"><a href="mailto:kps@gmail.com">kps@gmail.com</a></p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="300" height="150"></iframe>
+    </div>
+
+    <div class="chatbot">
+        <button id="chatbot-btn">💬</button>
+        <div id="chatbox" class="hidden">
+            <div class="chatbox-header">
+                <h4>Chat with KPS Bot</h4>
+                <button id="close-chat">×</button>
+            </div>
+            <div class="chatbox-body">
+                <p><strong>KPS Bot:</strong> Assalamualaikum! Apa yang boleh kami bantu?</p>
+            </div>
+            <div class="chatbox-footer">
+                <input type="text" id="user-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">Tentang KPS</a></li>
+        <li><a href="merchandise.html">E-Mall</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-bottom">© 2025 Kumpulan PUTRA Seni. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openPopup(product) {
+        let title = '', img = '', desc = '';
+  
+        if(product === 'rp') {
+         title = 'KPS di Festival Sarawakiana';
+         img = 'images/WhatsApp Image 2025-10-25 at 16.15.45_8771cb3e.jpg';
+         desc = '<a href="news.html#rp" class="popup-link">Berita lanjut...</a>';
+        } else if(product === 'ntfb') {
+         title = 'National Theatre Festival Brunei (NTFB) 2025';
+         img = 'images/1758815485341.jpg';
+         desc = '<a href="news.html#ntfb" class="popup-link">Berita lanjut...</a>';
+        } else if(product === 'jelajah sastera') {
+         title = 'Jelajah Sastera KPS di SMMHT';
+         img = 'images/IMG-20250731-WA0025.jpg';
+         desc = '<a href="news.html#jelajah" class="popup-link">Berita lanjut...</a>';
+        }
+
+        document.getElementById('popup-title').textContent = title;
+        document.getElementById('popup-img').src = img;
+        document.getElementById('popup-desc').innerHTML = desc;
+
+        document.getElementById('popup').style.display = 'flex';
+      }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    // When page loads, remove the hash to hide popups
+    window.addEventListener('load', () => {
+        if (window.location.hash) {
+        history.replaceState("", document.title, window.location.pathname + window.location.search);
+        }
+    });
+
+    const btn = document.getElementById('chatbot-btn');
+    const chatbox = document.getElementById('chatbox');
+    const closeChat = document.getElementById('close-chat');
+
+    // Toggle chatbot visibility
+    btn.addEventListener('click', () => {
+    chatbox.classList.toggle('hidden');
+    });
+
+    // Close button inside chatbox
+    closeChat.addEventListener('click', () => {
+    chatbox.classList.add('hidden');
+    });
+
+ </script>
+
+</body>
+</html>

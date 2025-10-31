@@ -48,6 +48,33 @@ nav a:hover {
   color: #ef233c;
 }
 
+/* Mobile fix */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+
+  .nav-menu a {
+    display: block;
+    background: #222;
+    padding: 0.8em 1em;
+    border-radius: 6px;
+  }
+
+  .nav-menu a:hover {
+    background: #333;
+  }
+}
+
 /* Banner */
 .banner img {
   width: 70%;

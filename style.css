@@ -569,3 +569,16 @@ img {
     justify-content: center;
   }
 }
+
+.payment-info {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.payment-info h3 {
+  margin-bottom: 0.5em;
+}
+
+.payment-info p {
+  line-height: 1.6;
+}

@@ -284,9 +284,10 @@ nav a:hover, nav a.active {
 /* Footer bottom text */
 .footer-bottom {
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
   font-size: 0.9em;
   color: #777;
+  white-space: nowrap;
 }
 
 /* Chatbot floating button */

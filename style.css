@@ -120,7 +120,11 @@ nav a:hover, nav a.active {
 }
 
 .content p {
-  margin-bottom: 2em; /* Adjust the value as needed */
+  margin-bottom: 2em;
+  padding: 0;
+  margin: 1em 0 0;
+  text-align: center; 
+  text-wrap-style: balance;
 }
 
 .hero h2 {
@@ -884,7 +888,7 @@ chip:hover {
 }
 
 .modal-close {
-  color: #f81919;
+  color:#f81919;
   position: absolute;
   top: 10px;
   right: 12px;

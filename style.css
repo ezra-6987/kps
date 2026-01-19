@@ -611,6 +611,9 @@ img {
   flex-wrap: wrap;
   gap: 0.6em;
   margin: 1em 0 2em;
+  max-width: 1200px;
+  padding: 0 1em;
+  justify-content: center;
 }
 
 .chip {
@@ -641,6 +644,10 @@ img {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5em;
   margin-top: 1.2em;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .creative-card {
@@ -648,6 +655,8 @@ img {
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .creative-img {
@@ -677,6 +686,9 @@ img {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5em;
   margin-top: 1.2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .writing-card {

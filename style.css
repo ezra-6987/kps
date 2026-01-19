@@ -29,6 +29,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Header */
@@ -120,11 +121,12 @@ nav a:hover, nav a.active {
 }
 
 .content p {
-  margin-bottom: 2em;
-  padding: 0;
-  margin: 1em 0 0;
-  text-align: center; 
-  text-wrap-style: balance;
+  max-width: 900px;
+  padding: 0 1.5em;
+  margin: 0 auto;
+  text-align: center;
+  text-align-last: center;
+  font-size: 1.1rem;
 }
 
 .hero h2 {

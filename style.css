@@ -177,6 +177,23 @@ nav a:hover, nav a.active {
   border-radius: 6px;
 }
 
+.pay-btn {
+  display: block;
+  padding: 0.9rem;
+  background: transparent;
+  border: 2px solid var(--accent-teal);
+  color: var(--accent-teal);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: var(--accent-teal);
+  color: #000;
+}
+
 /* Cards Section */
 .cards {
   display: grid;

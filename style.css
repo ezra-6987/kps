@@ -179,7 +179,7 @@ nav a:hover, nav a.active {
 
 .pay-btn {
   display: block;
-  padding: 0.9rem;
+  padding: 0.6rem;
   background: transparent;
   border: 2px solid var(--accent-teal);
   color: var(--accent-teal);

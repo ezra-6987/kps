@@ -101,7 +101,8 @@ nav a:hover, nav a.active {
 
 /* Banner */
 .banner img {
-  width: 100%;
+  width: 80%;
+  height:300px;
   margin: 0 auto; /* Centers the banner on all screens */
 }
 

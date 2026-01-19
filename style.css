@@ -796,11 +796,17 @@ chip:hover {
 }
 
 .link-btn {
-  color: #6ca0ff;
+  background: rgba(255, 204, 51, 0.1);
+  color: var(--accent-teal);
+  padding: 0.25em 0.6em;
+  border: 1px solid var(--accent-teal);
+  border-radius: 9px;
   text-decoration: none;
 }
 .link-btn:hover {
-  text-decoration: underline;
+  text-decoration:dashed;
+  background: var(--accent-teal);
+  color: #f51515;
 }
 
 .submit-cta {

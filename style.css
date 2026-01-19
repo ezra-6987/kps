@@ -539,9 +539,17 @@ article {
   }
 
   nav {
-    display: flex;
-    gap: 1.5rem;
+     width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox hide scrollbar */
   }
+
+  nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari hide scrollbar */
+  }
+
 
   nav a {
     color: var(--text-muted);
@@ -549,6 +557,10 @@ article {
     font-size: 0.9rem;
     transition: 0.3s;
     color: var(--accent-teal);
+    display: inline-block;
+    padding: 0.6em 0.9em;
+    margin-right: 0.3em;
+    border-radius: 999px;
   }
 }
 

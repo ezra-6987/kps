@@ -604,6 +604,18 @@ img {
 /* ===== Creative Page ===== */
 .creative-hero {
   margin: 1.5em 0 1em;
+  background: radial-gradient(circle at center, #1a2a2a 0%, var(--bg-dark) 80%);
+}
+
+.creative-hero h2 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--accent-gold), #fff, var(--accent-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .chips {
@@ -613,6 +625,7 @@ img {
   margin: 1em 0 2em;
   max-width: 1200px;
   padding: 0 1em;
+  padding-bottom: 2rem;
   justify-content: center;
 }
 
@@ -620,9 +633,21 @@ img {
   display: inline-block;
   padding: 0.4em 0.8em;
   border-radius: 999px;
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass);
   color: #ddd;
   font-size: 0.9em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+chip:hover {
+  background: var(--accent-teal);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 242, 234, 0.3);
 }
 
 .creative-section {
@@ -651,7 +676,8 @@ img {
 }
 
 .creative-card {
-  background: rgba(255,255,255,0.04);
+  background: var(--bg-card);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.06);
@@ -659,11 +685,18 @@ img {
   flex-direction: column;
 }
 
+.creative-card:hover {
+  transform: scale(1.03);
+  border-color: var(--accent-gold);
+}
+
 .creative-img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
+  transition: 0.5s;
+  filter: grayscale(20%);
 }
 
 .creative-card-body {
@@ -692,10 +725,11 @@ img {
 }
 
 .writing-card {
-  background: rgba(255,255,255,0.04);
+  position: relative;
+  background: linear-gradient(145deg, #1e1e1e, #131313);
+  border-left: 4px solid var(--accent-gold);
   border-radius: 12px;
   padding: 1em 1.1em;
-  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .writing-head {
@@ -706,9 +740,10 @@ img {
 }
 
 .badge {
-  background: #2b2d42;
-  color: #fff;
+  background: rgba(255, 204, 51, 0.1);
+  color: var(--accent-gold);
   padding: 0.25em 0.6em;
+  border: 1px solid var(--accent-gold);
   border-radius: 999px;
   font-size: 0.8em;
   white-space: nowrap;
@@ -721,9 +756,13 @@ img {
 }
 
 .excerpt {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #ccc;
   margin: 0;
   padding-left: 1em;
-  border-left: 3px solid rgba(230,57,70,0.7);
+  border-left: none;
   color: #ddd;
   line-height: 1.7;
 }
@@ -782,9 +821,10 @@ img {
   max-width: 950px;
   width: min(92vw, 950px);
   margin: 6vh auto;
-  background: #111;
+  background: #0a0a0a;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--accent-teal);
+  backdrop-filter: blur(20px);
   box-shadow: 0 12px 40px rgba(0,0,0,0.55);
   overflow: hidden;
 }
@@ -795,11 +835,13 @@ img {
 
 .modal-title {
   margin: 0.2em 0 0.2em;
-  color: #fff;
+  color: var(--accent-gold);
   position: sticky;
   top: 0;
   background: #111;
   padding-top: 0.5em;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .modal-meta {
@@ -813,7 +855,8 @@ img {
 }
 
 .modal-body {
-  color: #ddd;
+  font-family: 'Georgia', serif;
+  color: #eee;
   line-height: 1.8;
   font-size: 1em;
   padding-bottom: 0.5em;

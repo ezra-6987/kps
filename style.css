@@ -589,3 +589,252 @@ img {
   margin: 2em 0;
   margin-bottom: 2.5em;
 }
+/* ===== Creative Page ===== */
+.creative-hero {
+  margin: 1.5em 0 1em;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin: 1em 0 2em;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #ddd;
+  font-size: 0.9em;
+}
+
+.creative-section {
+  margin: 2.5em 0;
+}
+
+.section-title h3 {
+  margin-bottom: 0.2em;
+}
+
+.section-title p {
+  margin-top: 0.2em;
+  opacity: 0.9;
+}
+
+/* Artwork grid */
+.creative-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5em;
+  margin-top: 1.2em;
+}
+
+.creative-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.creative-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.creative-card-body {
+  padding: 1em;
+}
+
+.creative-card-body .meta {
+  color: #aaa;
+  font-size: 0.9em;
+  margin: 0.4em 0 0.6em;
+}
+
+.creative-card-body .desc {
+  color: #ddd;
+}
+
+/* Writing grid */
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5em;
+  margin-top: 1.2em;
+}
+
+.writing-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  padding: 1em 1.1em;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.writing-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.badge {
+  background: #2b2d42;
+  color: #fff;
+  padding: 0.25em 0.6em;
+  border-radius: 999px;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.writing-card .meta {
+  color: #aaa;
+  font-size: 0.9em;
+  margin: 0.4em 0 0.8em;
+}
+
+.excerpt {
+  margin: 0;
+  padding-left: 1em;
+  border-left: 3px solid rgba(230,57,70,0.7);
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.writing-actions {
+  margin-top: 1em;
+}
+
+.link-btn {
+  color: #6ca0ff;
+  text-decoration: none;
+}
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+.submit-cta {
+  margin: 3em 0 1em;
+  padding: 1.2em;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .creative-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .creative-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Text modal layout */
+/* Modal base */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:99999;
+}
+
+.modal:target{
+  display:block;
+}
+
+/* Center modal box */
+.modal-content{
+  max-width: 950px;
+  width: min(92vw, 950px);
+  margin: 6vh auto;
+  background: #111;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+  overflow: hidden;
+}
+
+.modal-text {
+  padding: 1.1em 1.2em 1.2em;
+}
+
+.modal-title {
+  margin: 0.2em 0 0.2em;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding-top: 0.5em;
+}
+
+.modal-meta {
+  margin: 0 0 1em;
+  color: #aaa;
+  font-size: 0.95em;
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding-top: 0.5em;
+}
+
+.modal-body {
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 1em;
+  padding-bottom: 0.5em;
+}
+
+/* Optional image inside text modal */
+.modal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin: 0.5em 0 1em;
+}
+
+.modal-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2; /* above overlay */
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 3; /* above everything */
+  cursor: pointer;
+}
+/* Limit modal height */
+/* Limit modal height */
+.modal-content {
+  max-height: 85vh;          /* never exceed screen height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make text area scrollable */
+.modal-body {
+  overflow-y: auto;
+  padding-right: 0.5em;     /* space for scrollbar */
+}
+
+

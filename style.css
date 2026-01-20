@@ -895,7 +895,7 @@ chip:hover {
 
 .modal-body img {
   display: block;
-  max-width: 25%;        /* never overflow modal */
+  max-width: 30%;        /* never overflow modal */
   height: auto;           /* keep aspect ratio */
   margin: 1em auto;       /* center horizontally */
   border-radius: 10px;    /* optional: smooth corners */

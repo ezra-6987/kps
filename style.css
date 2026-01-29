@@ -1022,7 +1022,21 @@ chip:hover {
     padding: 1.2em;
   }
 }
-
+.back-btn {
+  display: inline-block;     /* important for margin to work properly */
+  margin-top: 1.2em;
+  background: rgba(255, 204, 51, 0.1);
+  color: var(--accent-teal);
+  padding: 0.25em 0.6em;
+  border: 1px solid var(--accent-teal);
+  border-radius: 9px;
+  text-decoration: none;
+}
+.back-btn:hover {
+  text-decoration:dashed;
+  background: var(--accent-teal);
+  color: #f51515;
+}
 
 
 

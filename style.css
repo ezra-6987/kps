@@ -1015,7 +1015,7 @@ chip:hover {
 
 @media (max-width: 600px) {
   .modal-image-wrap img {
-    max-height: 200px;
+    max-height: 500px;
   }
 
   .modal-content {
